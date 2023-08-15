@@ -27,8 +27,7 @@
   .expense-date {
  
   justify-content: space-between;
-  
-  
+
   
    
   }
@@ -60,4 +59,5 @@
    color: #000; margin: 10px;
    background-color: blueviolet;
   border-radius: 5px;
+  cursor: pointer;
   } 
