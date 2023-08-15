@@ -1,29 +1,26 @@
 
 .expense-item {
     display: flex;
-    font-size: 1.6rem;
-    justify-content: space-between;
-    align-items: center;
-    padding: .6rem;
-    margin: 2rem;
-    background-color: rgb(192, 205, 205);
-    width: 50rem;
-    max-width: 95%;
-    border-radius: 12px;
+    
+    position: relative;
+    padding: 2px;
+  
+    
    
   }
   
   .expense-details {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    align-items: flex-start;
-    flex-flow: column-reverse;
+    display: flex;
+  justify-content: space-between;
+  border-radius: 9px;
+   
     background-color: rgb(242, 242, 252);
-    width: 50rem;
-    max-width: 95%;
-    border-radius: 12px;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+ 
+    
+ 
     
   }
   
@@ -59,4 +56,8 @@
     color: #555;
     padding: 10px;
   }
-  
+  .btn{
+   color: #000; margin: 10px;
+   background-color: blueviolet;
+  border-radius: 5px;
+  } 
