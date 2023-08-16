@@ -15,12 +15,16 @@ const App = () => {
     
     // ... Add more expenses as needed
   ];
+   const addExpenseHAndler = expense =>{
+     console.log('In App.js');
+     console.log(expense);
+   };
 
   return (
     <div>
        
       <h2>Let's get started</h2>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHAndler} />
       <Expenses expenses={expenses} />
     </div>
   );
