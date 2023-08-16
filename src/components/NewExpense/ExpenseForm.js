@@ -1,26 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './ExpenseForm.css'
 
 const ExpenseForm = () => {
-  
-    const TitleChangeHandler = (event) =>{
-    console.log(event.target.value);
-    };
+  const [enterTitle, setEnterTitle] = useState('');
+  const [enterAmount, setEnterAmount] = useState('');
+  const [enterDate, setEnterDate] = useState('');
 
+    const titleChangeHandler = (event) =>{
+       setEnterTitle(event.target.value);
+    };
+    const amountChangeHandler = (event) =>{
+       setEnterAmount(event.target.value);
+    };
+    const dateChangeHandler = (event) =>{
+       setEnterDate(event.target.value);
+    };
   return (
     <form>
     <div className="expense-form">
   <div className="input-row">
-    <label htmlFor="title">Expense Title</label><br/>
-    <input type="text" id="title"  onChange={TitleChangeHandler} placeholder="Expense Title" />
+    <label >Expense Title</label>
+    <input type="text"   onChange={titleChangeHandler} placeholder="Expense Title" />
   </div>
   <div className="input-row">
-    <label htmlFor="amount">Expense Amount</label><br/>
-    <input type="number" id="amount"  placeholder="Expense Amount" />
+    <label>Expense Amount</label>
+    <input type="number"   placeholder="Expense Amount"  min="0.01" step="0.01" onChange={amountChangeHandler}/>
+   
   </div>
   <div className="input-row">
-    <label htmlFor="date">Expense Date</label>
-    <input type="date" id="date" placeholder="Expense Date" />
+    <label>Expense Date</label>
+    <input type="date"  placeholder="Expense Date" min="2019-01-01" max="02024-01-01" onChange={dateChangeHandler}   />
   </div>
   <div className="button-row">
     <button>Add Expense</button>
