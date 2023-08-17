@@ -4,8 +4,8 @@ import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 const DummyData = [
  
-  { id: 'e3', date: new Date(2020, 2, 28), title: 'Internet Bill', amount: 80.00, location: 'Home' },
-  { id: 'e5', date: new Date(2020, 4, 10), title: 'Movie Tickets', amount: 20.00, location: 'Cinema' },
+  { id: 'e3', date: new Date(2022, 2, 28), title: 'Internet Bill', amount: 80.00, location: 'Home' },
+  { id: 'e5', date: new Date(2021, 4, 10), title: 'Movie Tickets', amount: 20.00, location: 'Cinema' },
   { id: 'e6', date: new Date(2020, 5, 5), title: 'Clothing', amount: 75.00, location: 'Mall' },
   
   // ... Add more expenses as needed
@@ -17,7 +17,7 @@ const App = () => {
      setExpenses(prevExpenses =>{
       return [expense, ...expenses]
      });
-     console.log(expense)
+    
    };
 
   return (
