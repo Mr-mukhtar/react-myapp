@@ -5,12 +5,26 @@ const ExpenseForm = (props) => {
   const [enterTitle, setEnterTitle] = useState('');
   const [enterAmount, setEnterAmount] = useState('');
   const [enterDate, setEnterDate] = useState('');
+  const [enterLocation, setEnterLocation] = useState('');
   // const [userInput, setUserinput] = useState({
   //   enterTitle :'',
   //   enterAmount: '',
   //   enterDate:''
   // });
 
+  const LocationChangeHandler = (event) =>{
+    setEnterLocation(event.target.value);
+   // setUserinput({
+   //   ...userInput,
+   //   enterTitle: event.target.value
+   // })
+   // setUserinput((prevState) =>{
+   //   return {
+   //     ...prevState,
+   //     enterTitle: event.target.value
+   //   }
+   //   });
+ };
 
     const titleChangeHandler = (event) =>{
        setEnterTitle(event.target.value);
@@ -55,11 +69,13 @@ const ExpenseForm = (props) => {
    const submitHandler =(event) => {
     event.preventDefault();
      const expenseData = {
+      location: enterLocation,
       title: enterTitle,
       amount:enterAmount,
       date: new Date(enterDate)
      };
    props.onSaveExpenseData(expenseData);
+   setEnterLocation('');
    setEnterTitle('');
    setEnterAmount('');
    setEnterDate('');
@@ -68,6 +84,14 @@ const ExpenseForm = (props) => {
   return (
     <form onSubmit={submitHandler}>
     <div className="expense-form">
+    <div className="input-row">
+    <label >Expense Location</label>
+    <input 
+    type="text"  
+    value={enterLocation} 
+    onChange={LocationChangeHandler} 
+   />
+   </div>
   <div className="input-row">
     <label >Expense Title</label>
     <input 

@@ -1,63 +1,68 @@
-
 .expense-item {
-    display: flex;
-    
-    position: relative;
-    padding: 2px;
-  
-    
-   
-  }
-  
-  .expense-details {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    display: flex;
-  justify-content: space-between;
-  border-radius: 9px;
-   
-    background-color: rgb(242, 242, 252);
- 
-    
- 
-    
-  }
-  
-  .expense-date {
- 
-  justify-content: space-between;
+  display: flex;
+  padding: 2px;
+ align-items: center;
+ justify-content: center;
 
+}
+
+.expense-details {
+  display: flex;
+  flex-direction: row;
   
-   
-  }
-  
-  .expense-title {
-    font-size: 1.2rem;
-    box-sizing: border-box;
-    margin: 5px 0;
-    padding: 10px;
-  }
-  
-  .expense-amount {
-    font-size: 1.1rem;
-    color: #c22323;
-    padding: 10px;
-    border-radius: .5rem ;
-    
-    border-color: rgb(33, 33, 116);
-    background-origin: border-box;
-  background-color: #555;
-  }
-  
-  .expense-location {
-    font-size: 1.5rem;
-    color: #555;
-    padding: 10px;
-  }
-  .btn{
-   color: #000; margin: 10px;
-   background-color: blueviolet;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(242, 242, 252);
+}
+
+.expense-date {
+
+  justify-content: center;
+  background-color: #ad1d1d;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 9px;
+
+  padding: 5px;
+  flex-direction: column-reverse;
+}
+
+.expense-title {
+  font-size: 1.6rem;
+  align-items: center;
+
+  display: flex;
+}
+
+.expense-amount {
+  display: flex;
+  color: #f0dada;
+  align-items: center;
+  border-radius: 5px;
+  margin: 30px;
+  padding: 10px;
+  background-color: #310f99;
+}
+
+.expense-location {
+  font-size: 1.5rem;
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  color: #555;
+  padding: 10px;
+}
+
+.btn {
+  color: #000;
+
+  background-color: blueviolet;
+  align-items: center;
+  display: flex;
+  margin-top:10%;
   border-radius: 5px;
   cursor: pointer;
-  } 
+  justify-content:center;
+}
