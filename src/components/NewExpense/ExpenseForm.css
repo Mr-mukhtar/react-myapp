@@ -1,22 +1,33 @@
-.expense-form { 
-    padding: 10px;
-    border-radius: 5px;
-    font: initial;
+.new-expense__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   margin-bottom: 1rem;
-  }
-  
-  .input-row input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  
-  .button-row {
-    text-align: right;
-    margin: 30px;
+  text-align: left;
 }
-    
- 
+
+.new-expense__control label {
+  font-weight: bold;
+  display: block;
+  text-align: left;
+  margin: 20px;
+}
+
+.new-expense__control input {
+  font: inherit;
+  padding: 0.5rem;
+ ;
+  border: 1px solid #ccc;
+  width: 20rem;
+  max-width: 100%;
+}
+
+.new-expense__actions {
+  text-align: end;
+  margin: 10px;
+}
+.new-expense__actions button:hover,
+.new-expense button:active {
+  background-color: #f40b0b;
+  border-color: #510674;
+}

@@ -1,8 +1,7 @@
 import React from 'react';
-
 import ExpenseDate from './ExpenseDate';
-
-import './ExpenseItem.css'; // Import the CSS file
+import './ExpenseItem.css';
+ 
 const ExpenseItem = (props) => {
   //const [amount, subTitle] = useState(props.amount);
   // const clickHandle = () => {
@@ -10,18 +9,21 @@ const ExpenseItem = (props) => {
   //   //console.log(props.title);
   // };
   return (
-    <div className="expense-item">
+   <li>
+   
          
-      <div className="expense-details">
-       <ExpenseDate  date= {props.date}/>
-        <div className="expense-title">{props.title}</div>
-        <div className="expense-amount">${props.amount}</div>
-        <div className="expense-location">{props.locationOfExpenditure}</div>
-       {/* <div>
-        <button className='btn'  onClick={clickHandle}>update</button>
-       </div> */}
-      </div>
-    </div>
+         <div className="expense-item">
+          
+          <ExpenseDate  date= {props.date}/>
+           <div className=".expense-item h2">{props.title}</div>
+           <div className="expense-item__price">${props.amount}</div>
+           <div className="expense-location">{props.locationOfExpenditure}</div>
+          {/* <div>
+           <button className='btn'  onClick={clickHandle}>update</button>
+          </div> */}
+         </div>
+      
+   </li>
   );
 }
 

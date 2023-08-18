@@ -83,8 +83,8 @@ const ExpenseForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-    <div className="expense-form">
-    <div className="input-row">
+    <div className="new-expense">
+    <div className="new-expense__control">
     <label >Expense Location</label>
     <input 
     type="text"  
@@ -92,7 +92,7 @@ const ExpenseForm = (props) => {
     onChange={LocationChangeHandler} 
    />
    </div>
-  <div className="input-row">
+  <div className="new-expense__control">
     <label >Expense Title</label>
     <input 
     type="text"  
@@ -100,7 +100,7 @@ const ExpenseForm = (props) => {
     onChange={titleChangeHandler} 
    />
   </div> 
-  <div className="input-row">
+  <div className="new-expense__control">
     <label>Expense Amount</label>
     <input 
     type="number" 
@@ -109,7 +109,7 @@ const ExpenseForm = (props) => {
      onChange={amountChangeHandler}/>
    
   </div>
-  <div className="input-row">
+  <div className="new-expense__control">
     <label>Expense Date</label>
     <input 
     type="date" 
@@ -117,11 +117,11 @@ const ExpenseForm = (props) => {
     min="2019-01-01" max="2024-01-01" 
     onChange={dateChangeHandler}   />
   </div>
-  <div className="button-row">
+  
+</div>
+<div className=".new-expense__actionsow">
     <button>Add Expense</button>
   </div>
-</div>
-
  </form>
   );
 };
